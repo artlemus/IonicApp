@@ -7,6 +7,20 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-    
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <ion-card>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">post:</ion-label>
+          <ion-input [(ngModel)]="message.text" name="text"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label position="stacked">img url:</ion-label>
+          <ion-input [(ngModel)]="message.imageUrl" name="image"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button [disabled]="!message.text && !message.imageUrl" (click)="onPost()" class="main-button" expand="block" color="secondary">Submit</ion-button>
+
 </ion-content>

@@ -1,3 +1,24 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+
+ion-card-content{
+  padding: 10px;
+  
+}
+
+ion-card-header{
+  padding-top: 0px;
+}
+ion-card-title{
+  font-size: 10px;
+  color: rgb(143, 143, 143);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: left;
+  margin-bottom: 5px;
+}
+ion-card-subtitle{
+  text-align: right;
+  color: white;
+  font-size: 14px;
+}
