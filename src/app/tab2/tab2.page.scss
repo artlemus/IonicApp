@@ -1,8 +1,37 @@
 ion-content ion-toolbar {
   --background: translucent;
+  
 }
 
+ion-card{
+  border-radius: 10px;
+  box-shadow: none !important;
+}
+
+ion-list{
+  background: transparent;
+  
+}
+
+.ion-content{
+  background-color:#696969;
+  
+}
 .main-button{
   margin-top: 25px;
   
+}
+
+.input{
+  border: 2px solid rgb(97, 218, 97);
+  border-radius: 10px;
+}
+
+
+
+
+.main-button{
+  margin-left: 100px;
+  box-shadow: 50%;
+  width: 100px;
 }

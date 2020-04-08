@@ -6,6 +6,8 @@ export class Message {
     public createdOn: Date;
 
 
+    currentDate = new Date();
+
     constructor() {
         this.to = "General";
     }

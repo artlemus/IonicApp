@@ -6,21 +6,28 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-    <ion-card>
+<ion-content color="tertiary" [fullscreen]="true">
+
+  
+    <ion-card color="tertiary">
       <ion-card-content>
-        <ion-item>
-          <ion-label position="stacked">post:</ion-label>
-          <ion-input [(ngModel)]="message.text" name="text"></ion-input>
+        <ion-list color="tertiary" lines="none">
+          
+        <ion-item color="tertiary">
+          <ion-label position="stacked">Your Message:</ion-label>
+          <ion-input [(ngModel)]="message.text" name="text" class="input"></ion-input>
         </ion-item>
         
-        <ion-item>
-          <ion-label position="stacked">img url:</ion-label>
-          <ion-input [(ngModel)]="message.imageUrl" name="image"></ion-input>
+        <ion-item color="tertiary">
+          <ion-label position="stacked">Image URL:</ion-label>
+          <ion-input [(ngModel)]="message.imageUrl" name="image" class="input"></ion-input>
         </ion-item>
+      </ion-list>
+      <ion-button [disabled]="!message.text && !message.imageUrl" (click)="onPost()" class="main-button" color="secondary" >Submit</ion-button>
       </ion-card-content>
     </ion-card>
+  
 
-    <ion-button [disabled]="!message.text && !message.imageUrl" (click)="onPost()" class="main-button" expand="block" color="secondary">Submit</ion-button>
-
+    
+  
 </ion-content>

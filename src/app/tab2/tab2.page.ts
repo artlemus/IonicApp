@@ -10,6 +10,7 @@ import { DataService } from "../services/data.service";
 })
 export class Tab2Page {
   message: Message = new Message();
+  
 
   constructor(private shared: SharedService, private data: DataService) {}
 
