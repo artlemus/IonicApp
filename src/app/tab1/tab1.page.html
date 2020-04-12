@@ -6,14 +6,14 @@
   </ion-toolbar>
 </ion-header>
 <ion-content color="tertiary" [fullscreen]="true">
-  <p>{{today | date:'fullDate'}}</p>
+  
   <hr width="80%" color="#808080" size="1">
   
-  <ion-card color="translucent" *ngFor="let message of getMessages()">
+  <ion-card color="translucent" *ngFor="let message of displayMessage">
     
     <ion-card-header>
       <br>
-      <ion-card-title>{{message.from}} @ {{message.currentDate | date:'h:mm:ss a'}}</ion-card-title>
+      <ion-card-title>{{message.from}} @ {{message.createdOn | date: 'hh:mm a'}}</ion-card-title>
       <ion-card-subtitle>{{message.text}}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content *ngIf="message.imageUrl">
@@ -21,3 +21,4 @@
     </ion-card-content>
   </ion-card>
 </ion-content>
+
