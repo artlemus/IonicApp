@@ -1,37 +1,38 @@
 ion-content ion-toolbar {
   --background: translucent;
-  
 }
 
-ion-card{
+ion-card {
   border-radius: 10px;
   box-shadow: none !important;
 }
+ion-title {
+  font-family: "Lily Script One", cursive;
+  font-size: 30px;
+}
 
-ion-list{
+ion-card-content {
+  text-align: center;
+}
+
+ion-list {
   background: transparent;
-  
 }
 
-.ion-content{
-  background-color:#696969;
-  
+.ion-content {
+  background-color: #696969;
 }
-.main-button{
+.main-button {
   margin-top: 25px;
-  
 }
 
-.input{
-  border: 2px solid rgb(97, 218, 97);
+.input {
+  border: 2px solid rgb(46, 107, 46);
+  background-color: rgba(73, 170, 73, 0.486);
   border-radius: 10px;
 }
 
-
-
-
-.main-button{
-  margin-left: 100px;
-  box-shadow: 50%;
+.main-button {
+  text-align: center;
   width: 100px;
 }

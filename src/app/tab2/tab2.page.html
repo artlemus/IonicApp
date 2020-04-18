@@ -1,33 +1,52 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="secondary">
     <ion-title>
-      Post
+      SimpleChat
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="tertiary" [fullscreen]="true">
-
-  
-    <ion-card color="tertiary">
-      <ion-card-content>
-        <ion-list color="tertiary" lines="none">
-          
+<ion-content [fullscreen]="true">
+  <ion-card  color="tertiary">
+    <ion-card-content>
+      <ion-list color="tertiary" lines="none">
         <ion-item color="tertiary">
           <ion-label position="stacked">Your Message:</ion-label>
-          <ion-input [(ngModel)]="message.text" name="text" class="input"></ion-input>
+          <ion-input
+            [(ngModel)]="message.text"
+            name="text"
+            class="input"
+          ></ion-input>
         </ion-item>
-        
+
         <ion-item color="tertiary">
           <ion-label position="stacked">Image URL:</ion-label>
-          <ion-input [(ngModel)]="message.imageUrl" name="image" class="input"></ion-input>
+          <ion-input
+            [(ngModel)]="message.imageUrl"
+            name="image"
+            class="input"
+          ></ion-input>
+        </ion-item>
+        <ion-item color="tertiary">
+          <ion-label position="stacked">To:</ion-label>
+          <ion-select [(ngModel)]="message.to">
+            <ion-select-option value="General">General</ion-select-option>
+            <ion-select-option
+              *ngFor="let friend of myFriends"
+              value="General"
+              [value]="friend.name"
+              >{{friend.name}}</ion-select-option
+            >
+          </ion-select>
         </ion-item>
       </ion-list>
-      <ion-button [disabled]="!message.text && !message.imageUrl" (click)="onPost()" class="main-button" color="secondary" >Submit</ion-button>
-      </ion-card-content>
-    </ion-card>
-  
-
-    
-  
+      <ion-button
+        [disabled]="!message.text && !message.imageUrl"
+        (click)="onPost()"
+        class="main-button"
+        color="secondary"
+        >Submit</ion-button
+      >
+    </ion-card-content>
+  </ion-card>
 </ion-content>

@@ -24,3 +24,24 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-content {
+    --background:  linear-gradient(rgb(0, 0, 0), rgba(24, 24, 24, 0.644)), url('../src/assets/images/tile.png'); 
+    background-color: rgb(23, 53, 36);
+    
+    
+
+  }
+
+  ion-item{
+    background: none;
+  }
+  
+  ion-label{
+    background: none;
+  }
+  
+  ion-input{
+    background: none;
+  }
+  

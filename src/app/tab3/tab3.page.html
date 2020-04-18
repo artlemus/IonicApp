@@ -1,14 +1,47 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="secondary">
     <ion-title>
-      Friends
+      SimpleChat
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="tertiary" [fullscreen]="true">
+<ion-content [fullscreen]="true" >
+  <ion-card  color="tertiary">
+  <ion-card-content>
+
+    
+
+    <ion-list lines="none">
+
+      <ion-item color="tertiary">
+        <ion-label>Friend Finder</ion-label>
+      </ion-item>
+
+      <ion-item color="tertiary">
+        <ion-input
+          [(ngModel)]="friend.name"
+          class="input"
+          name="name"
+        ></ion-input>
+      </ion-item>
   
-  
+      
+    </ion-list>
+
+    <ion-button
+    (click)="onSave()"
+    class="main-button"
+    expand="block"
+    color="secondary"
+    >Add Friend</ion-button
+  >
+    <ion-list color="tertiary" lines="none">
+      <ion-item *ngFor="let friend of myFriends" color="tertiary">
+        <ion-icon name="person-outline"></ion-icon>{{friend.name}}
+      </ion-item>
+     
+    </ion-list>
+  </ion-card-content>
+</ion-card>
 </ion-content>
-
-

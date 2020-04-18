@@ -2,39 +2,58 @@ ion-content ion-toolbar {
   --background: translucent;
 }
 
-p{
+ion-card-title {
+  color: #e6e6e6;
+  font-size: 11px;
+  font-family: "Open Sans", sans-serif;
+}
+
+ion-title {
+  font-family: "Lily Script One", cursive;
+  font-size: 30px;
+}
+p {
   text-align: center;
   font-size: 10px;
   color: #a7a7a7;
 }
 
-ion-card-content{
+ion-card-content {
   padding: 10px;
-  
 }
-ion-card{
+ion-card {
   border-radius: 5px;
   margin: 0.2em 0;
   padding: 0.5em;
-  max-width: 50%;
-  color: #a7a7a7;
+  color: #e6e6e6;
   box-shadow: none !important;
+  font-family: "Open Sans", sans-serif;
 }
-ion-card-header{
+ion-card-header {
   padding-top: 0px;
 }
-ion-card-title{
+ion-card-title {
   font-size: 14px;
   float: left;
   margin-right: 5%;
   margin-bottom: 5px;
 }
-ion-card-subtitle{
+ion-card-subtitle {
   font-size: 10px;
   float: left;
   margin-right: 5%;
   color: rgb(119, 119, 119);
   clear: both;
-} 
+  font-family: "Open Sans", sans-serif;
+}
 
+.ion-content {
+  background-image: url(/src/images/tile.png);
+  width: 500px;
+  height: 500px;
+}
 
+ion-img{
+  border-radius: 15px !important; 
+  overflow: hidden;
+}
